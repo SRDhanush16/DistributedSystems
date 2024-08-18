@@ -1,0 +1,15 @@
+<configuration>
+    <!-- Define a console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- Direct log messages to stdout -->
+        <target>System.out</target>
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{1}:%line - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the root logger level to ERROR and attach the console appender -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
